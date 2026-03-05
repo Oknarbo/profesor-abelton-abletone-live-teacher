@@ -1,0 +1,161 @@
+AI COPILOT FOR ABLETON LIVE - COMMERCIAL LICENSE
+Version 2.0.0
+Copyright (c) 2025 AI Copilot Team
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+This is a commercial software product. By purchasing and/or using this software,
+you agree to be bound by the terms of this license agreement.
+
+1. GRANT OF LICENSE
+
+   Subject to the terms and conditions of this License, the copyright holder
+   grants you a non-exclusive, non-transferable license to:
+   
+   a) Install and use the Software on computers that you own or control
+   b) Make backup copies of the Software for archival purposes
+   c) Use the Software for personal and commercial music production
+
+2. RESTRICTIONS
+
+   You may NOT:
+   
+   a) Redistribute, sell, rent, lease, or sublicense the Software
+   b) Reverse engineer, decompile, or disassemble the Software
+   c) Remove or alter any copyright notices or labels on the Software
+   d) Share your license key or installation with others
+   e) Use the Software to create competing products
+   f) Extract, copy, or modify the source code (except as permitted by law)
+
+3. OWNERSHIP
+
+   This Software is licensed, not sold. The copyright holder retains all rights,
+   title, and interest in and to the Software, including all intellectual
+   property rights.
+
+4. UPDATES AND SUPPORT
+
+   Purchasers of this Software are entitled to:
+   
+   a) Free updates for major version 2.x
+   b) Email support for installation and usage
+   c) Access to documentation and tutorials
+   d) Priority bug fixes
+   
+   Major version updates (e.g., 3.0) may require additional purchase.
+
+5. API KEYS AND THIRD-PARTY SERVICES
+
+   This Software integrates with third-party AI services (OpenAI, Anthropic, etc.)
+   that require separate API keys. You are responsible for:
+   
+   a) Obtaining your own API keys
+   b) Paying for API usage as per the provider's terms
+   c) Complying with each provider's terms of service
+   
+   The Software also supports free, local AI via Ollama.
+
+6. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+7. LIMITATION OF LIABILITY
+
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+   IN THE SOFTWARE.
+
+8. TERMINATION
+
+   This License is effective until terminated. Your rights under this License
+   will terminate automatically without notice if you fail to comply with any
+   term of this License.
+
+9. REFUND POLICY
+
+   Refunds are available within 14 days of purchase if:
+   
+   a) The Software does not work as described
+   b) Technical issues cannot be resolved
+   c) You are not satisfied with the product
+   
+   Contact support@aicopilot.com for refund requests.
+
+10. GOVERNING LAW
+
+    This License shall be governed by and construed in accordance with the laws
+    of the jurisdiction in which the copyright holder resides.
+
+11. ENTIRE AGREEMENT
+
+    This License constitutes the entire agreement between you and the copyright
+    holder regarding the Software and supersedes all prior agreements.
+
+---
+
+THIRD-PARTY LICENSES
+
+This Software uses the following open-source libraries:
+
+- Python: PSF License
+- Requests: Apache License 2.0
+- SpeechRecognition: BSD License
+- gTTS: MIT License
+- pygame: LGPL License
+
+See individual library documentation for their full license texts.
+
+---
+
+CONTACT
+
+For licensing questions, support, or sales inquiries:
+
+Email: support@aicopilot.com
+Website: https://aicopilot.com
+Gumroad: https://gumroad.com/aicopilot
+
+---
+
+Copyright (c) 2025 AI Copilot Team. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

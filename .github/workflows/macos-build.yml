@@ -1,0 +1,101 @@
+name: macOS Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install PyInstaller
+      run: |
+        pip install pyinstaller
+
+    - name: Create build directory
+      run: |
+        mkdir -p build dist release
+
+    - name: Run PyInstaller
+      run: |
+        pyinstaller --noconfirm --clean --windowed \
+          --name "ProfesorAbelton" \
+          --add-data "Config:Config" \
+          --add-data "RemoteScript:RemoteScript" \
+          --add-data "Docs:Docs" \
+          --add-data "FAQ.md:." \
+          --add-data "USER_MANUAL.md:." \
+          --add-data "README.md:." \
+          --add-data "LICENSE.txt:." \
+          --add-data "GUMROAD_README.txt:." \
+          --hidden-import "GUI.profesor_ableton_gui" \
+          --hidden-import "GUI.first_launch_wizard" \
+          --hidden-import "Server.ai_copilot_server" \
+          --hidden-import "Utils.api_key_manager" \
+          --hidden-import "Utils.ableton_detector" \
+          launch_profesor_ableton.py
+
+    - name: Create macOS app bundle
+      run: |
+        # Create proper .app structure
+        mkdir -p "dist/ProfesorAbelton.app/Contents/MacOS"
+        mkdir -p "dist/ProfesorAbelton.app/Contents/Resources"
+
+        # Copy executable
+        cp "dist/ProfesorAbelton" "dist/ProfesorAbelton.app/Contents/MacOS/"
+
+        # Create Info.plist
+        cat > "dist/ProfesorAbelton.app/Contents/Info.plist" << EOF
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+        <dict>
+            <key>CFBundleExecutable</key>
+            <string>ProfesorAbelton</string>
+            <key>CFBundleIdentifier</key>
+            <string>com.profesorabelton.app</string>
+            <key>CFBundleName</key>
+            <string>Profesor Abelton</string>
+            <key>CFBundleVersion</key>
+            <string>2.0.0</string>
+            <key>CFBundleShortVersionString</key>
+            <string>2.0.0</string>
+            <key>LSMinimumSystemVersion</key>
+            <string>10.13</string>
+            <key>CFBundleIconFile</key>
+            <string>AppIcon</string>
+            <key>CFBundlePackageType</key>
+            <string>APPL</string>
+        </dict>
+        </plist>
+        EOF
+
+    - name: Create ZIP for distribution
+      run: |
+        cd dist
+        ditto -c -k --sequesterRsrc --keepParent "ProfesorAbelton.app" "../release/ProfesorAbelton_macOS_v2.0.0.zip"
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos-build
+        path: |
+          dist/ProfesorAbelton.app
+          release/ProfesorAbelton_macOS_v2.0.0.zip

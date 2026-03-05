@@ -1,0 +1,119 @@
+╔══════════════════════════════════════════════════════════╗
+║                                                          ║
+║        🎓 PROFESOR ABELTON v2.0.0 🎓                     ║
+║                                                          ║
+║           DOBRODOŠLI! / WELCOME!                         ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
+
+HRVATSKI:
+═════════
+
+BRZA INSTALACIJA (5 minuta):
+
+1. Dvaput klikni: install.bat ili Installers\install_windows.py
+2. Pričekaj da se instalira
+3. Pokreni: start_server.bat
+4. Otvori Ableton Live
+5. Preferences > Control Surface > "ProfesorAbelton"
+6. Pokreni: start_profesor.bat ili start_gui.bat
+7. Probaj: "Napravi novu MIDI traku"
+
+DETALJNE UPUTE:
+→ Pročitaj: README_HR.md (Hrvatski)
+→ Brzi vodič: Docs/QUICK_START.md
+→ Hrvatski tutorial: Docs/TUTORIAL_HR.md
+
+PODRŠKA:
+→ Dokumentacija: README_HR.md
+
+═══════════════════════════════════════════════════════════
+
+ENGLISH:
+════════
+
+QUICK INSTALLATION (5 minutes):
+
+1. Double-click: install.bat or Installers\install_windows.py
+2. Wait for installation
+3. Run: start_server.bat
+4. Open Ableton Live
+5. Preferences > Control Surface > "ProfesorAbelton"
+6. Run: start_profesor.bat or start_gui.bat
+7. Try: "Create a new MIDI track"
+
+DETAILED INSTRUCTIONS:
+→ Read: README_EN.md (English)
+→ Quick guide: Docs/QUICK_START.md
+→ Complete tutorial: Docs/TUTORIAL_EN.md
+
+SUPPORT:
+→ Documentation: README_EN.md
+
+═══════════════════════════════════════════════════════════
+
+🆓 BESPLATNA AI OPCIJA / FREE AI OPTION:
+
+Instaliraj Ollama (100% besplatno / 100% free):
+1. Idi na / Go to: https://ollama.ai
+2. Preuzmi / Download: Windows/Mac/Linux verzija
+3. Instaliraj / Install
+4. Pokreni / Run: ollama serve
+5. Preuzmi model / Download model: ollama pull llama3.1
+6. Gotovo! / Done!
+
+═══════════════════════════════════════════════════════════
+
+📁 ŠTO SE NALAZI U OVOM FOLDERU / FOLDER CONTENTS:
+
+RemoteScript/     - Ableton skripta
+Server/           - AI server backend
+GUI/              - Grafičko sučelje
+Config/           - Konfiguracija
+Docs/             - Dokumentacija
+Installers/       - Instalacijske skripte
+
+═══════════════════════════════════════════════════════════
+
+⚡ BRZO TESTIRANJE / QUICK TEST:
+
+Nakon instalacije / After installation:
+
+1. Otvori Command Prompt / Open Command Prompt
+2. Upiši / Type:
+   
+   python --version
+   
+3. Trebao bi vidjeti / You should see:
+   
+   Python 3.x.x
+
+4. Ako ne vidiš / If not:
+   → Reinstaliraj Python / Reinstall Python
+   → Označi "Add to PATH" / Check "Add to PATH"
+
+═══════════════════════════════════════════════════════════
+
+❓ PROBLEMI? / ISSUES?
+
+Server se ne pokreće / Server won't start:
+→ Provjeri Python / Check Python
+→ Pokreni install.bat ponovno / Run install.bat again
+
+Ableton ne vidi script / Ableton doesn't see script:
+→ Restartuj Ableton / Restart Ableton
+→ Provjeri Preferences / Check Preferences
+
+Voice ne radi / Voice doesn't work:
+→ pip install pyaudio
+→ Provjeri mikrofon / Check microphone
+
+═══════════════════════════════════════════════════════════
+
+🎵 SRETNO! / GOOD LUCK!
+
+Uživajte u muzičkoj produkciji s AI!
+Enjoy music production with AI!
+
+═══════════════════════════════════════════════════════════
+

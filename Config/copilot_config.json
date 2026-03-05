@@ -1,0 +1,349 @@
+{
+  "version": "2.0.0",
+  "name": "Profesor Abelton",
+  "description": "AI asistent za Ableton Live (multi-LLM support)",
+  "server": {
+    "host": "localhost",
+    "port": 8766,
+    "max_connections": 10,
+    "timeout": 30
+  },
+  "ai_providers": {
+    "default": "GROQ",
+    "fallback_enabled": true,
+    "fallback_order": [
+      "GROQ",
+      "CLAUDE"
+    ],
+    "models": {
+      "GPT": "gpt-4o-mini",
+      "CLAUDE": "claude-opus-4-20250514",
+      "CLAUDE_SONNET": "claude-sonnet-4-20250514",
+      "CLAUDE_HAIKU": "claude-3-5-haiku-20241022",
+      "GROK": "grok-beta",
+      "GROQ": "llama-3.3-70b-versatile",
+      "OLLAMA": "llama3.1"
+    },
+    "api_urls": {
+      "GPT": "https://api.openai.com/v1/chat/completions",
+      "CLAUDE": "https://api.anthropic.com/v1/messages",
+      "GROK": "https://api.x.ai/v1/chat/completions",
+      "GROQ": "https://api.groq.com/openai/v1/chat/completions",
+      "OLLAMA": "http://localhost:11434/api/generate"
+    },
+    "timeout": 60,
+    "max_retries": 3
+  },
+  "voice": {
+    "enabled": true,
+    "language": "en",
+    "alternative_language": "hr",
+    "timeout": 10,
+    "energy_threshold": 300,
+    "pause_threshold": 0.8,
+    "phrase_threshold": 0.3,
+    "supported_languages": {
+      "en": "en-US",
+      "hr": "hr-HR"
+    }
+  },
+  "ableton": {
+    "supported_versions": [
+      "10",
+      "11",
+      "12"
+    ],
+    "remote_script_name": "ProfesorAbelton",
+    "max_tracks": 128,
+    "max_clips_per_track": 128,
+    "state_update_interval": 1.0,
+    "osc": {
+      "enabled": false,
+      "ableton_receive_port": 9000,
+      "server_send_port": 9001,
+      "host": "127.0.0.1"
+    },
+    "available_effects": [
+      "Reverb",
+      "Delay",
+      "Chorus",
+      "Flanger",
+      "Phaser",
+      "Distortion",
+      "Overdrive",
+      "Compressor",
+      "Limiter",
+      "Gate",
+      "EQ Eight",
+      "EQ Three",
+      "Filter",
+      "Auto Filter",
+      "Frequency Shifter",
+      "Ring Modulator",
+      "Vocoder",
+      "Redux",
+      "Vinyl Distortion",
+      "Dynamic Tube",
+      "Saturator",
+      "Erosion",
+      "Spectrum",
+      "Utility"
+    ],
+    "available_instruments": [
+      "Analog",
+      "Collision",
+      "Electric",
+      "Operator",
+      "Sampler",
+      "Simpler",
+      "Tension",
+      "Wavetable",
+      "Drum Rack",
+      "Impulse",
+      "Simpler"
+    ]
+  },
+  "ui": {
+    "theme": "dark",
+    "font_family": "Helvetica",
+    "font_size": 11,
+    "max_history_lines": 500,
+    "auto_scroll": true,
+    "show_timestamps": true,
+    "colors": {
+      "background": "#1e1e1e",
+      "foreground": "#ffffff",
+      "user": "#4EC9B0",
+      "ai": "#DCDCAA",
+      "system": "#9CDCFE",
+      "error": "#F48771"
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "file": "copilot.log",
+    "max_file_size": 10485760,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "features": {
+    "auto_analyze": true,
+    "auto_suggestions": true,
+    "learning_mode": true,
+    "command_history": true,
+    "voice_feedback": true,
+    "multi_language": true
+  },
+  "commands": {
+    "create_audio_track": {
+      "description": "Create a new audio track",
+      "parameters": [
+        "position"
+      ],
+      "examples": [
+        "Create an audio track",
+        "Add new audio track"
+      ]
+    },
+    "create_midi_track": {
+      "description": "Create a new MIDI track",
+      "parameters": [
+        "position"
+      ],
+      "examples": [
+        "Create a MIDI track",
+        "Add new MIDI track"
+      ]
+    },
+    "set_tempo": {
+      "description": "Set project tempo (BPM)",
+      "parameters": [
+        "bpm"
+      ],
+      "examples": [
+        "Set tempo to 128",
+        "Change BPM to 140"
+      ]
+    },
+    "play": {
+      "description": "Start playback",
+      "parameters": [],
+      "examples": [
+        "Play",
+        "Start playback",
+        "Press play"
+      ]
+    },
+    "stop": {
+      "description": "Stop playback",
+      "parameters": [],
+      "examples": [
+        "Stop",
+        "Stop playback",
+        "Pause"
+      ]
+    },
+    "record": {
+      "description": "Toggle recording mode",
+      "parameters": [],
+      "examples": [
+        "Record",
+        "Start recording"
+      ]
+    },
+    "add_device": {
+      "description": "Add effect or instrument to track",
+      "parameters": [
+        "track_index",
+        "device_name"
+      ],
+      "examples": [
+        "Add reverb to track 1",
+        "Put compressor on track 2"
+      ]
+    },
+    "set_track_volume": {
+      "description": "Set track volume (0.0 - 1.0)",
+      "parameters": [
+        "track_index",
+        "volume"
+      ],
+      "examples": [
+        "Set track 1 volume to 0.8",
+        "Lower volume of track 2"
+      ]
+    },
+    "mute_track": {
+      "description": "Mute or unmute track",
+      "parameters": [
+        "track_index",
+        "mute"
+      ],
+      "examples": [
+        "Mute track 1",
+        "Unmute track 2"
+      ]
+    },
+    "solo_track": {
+      "description": "Solo or unsolo track",
+      "parameters": [
+        "track_index",
+        "solo"
+      ],
+      "examples": [
+        "Solo track 1",
+        "Unsolo all tracks"
+      ]
+    },
+    "arm_track": {
+      "description": "Arm or unarm track for recording",
+      "parameters": [
+        "track_index",
+        "arm"
+      ],
+      "examples": [
+        "Arm track 1",
+        "Unarm track 2"
+      ]
+    },
+    "create_clip": {
+      "description": "Create new clip in slot",
+      "parameters": [
+        "track_index",
+        "slot_index",
+        "length"
+      ],
+      "examples": [
+        "Create 4 bar clip in track 1",
+        "Add clip to track 2 slot 0"
+      ]
+    },
+    "add_notes": {
+      "description": "Add MIDI notes to clip",
+      "parameters": [
+        "track_index",
+        "slot_index",
+        "notes"
+      ],
+      "examples": [
+        "Add C major chord to track 1"
+      ]
+    }
+  },
+  "tutorials": {
+    "beginner": [
+      "How to create tracks",
+      "Understanding tempo and time signatures",
+      "What is MIDI?",
+      "Basic mixing concepts",
+      "Using effects: Reverb and Delay"
+    ],
+    "intermediate": [
+      "Advanced MIDI editing",
+      "Using automation",
+      "Sidechain compression",
+      "Working with samples",
+      "Arrangement techniques"
+    ],
+    "advanced": [
+      "Mastering techniques",
+      "Sound design with synthesizers",
+      "Advanced modulation",
+      "Multiband processing",
+      "Professional mixing workflow"
+    ]
+  },
+  "communication": {
+    "methods": {
+      "socket": {
+        "description": "Direct socket communication (default)",
+        "pros": [
+          "Reliable",
+          "Real-time"
+        ],
+        "cons": [
+          "Requires custom remote script"
+        ]
+      },
+      "osc": {
+        "description": "Open Sound Control (alternative)",
+        "pros": [
+          "Industry standard",
+          "Works with any OSC-enabled device",
+          "No custom script needed"
+        ],
+        "cons": [
+          "Requires OSC setup in Ableton",
+          "Limited API compared to Max for Live"
+        ],
+        "setup_steps": [
+          "In Ableton: Preferences > Link MIDI > OSC",
+          "Set OSC Receive Port to 9000",
+          "Set OSC Send Port to 9001",
+          "Enable OSC",
+          "Restart Ableton"
+        ]
+      },
+      "max_for_live": {
+        "description": "Max for Live device (recommended)",
+        "pros": [
+          "Full Ableton Live API access",
+          "Most reliable",
+          "Real-time device creation"
+        ],
+        "cons": [
+          "Requires Max for Live license",
+          "More complex setup"
+        ],
+        "setup_steps": [
+          "Install Max for Live",
+          "Load Profesor Abelton device on track",
+          "Configure connection settings"
+        ]
+      }
+    }
+  },
+  "mcp_enabled": true,
+  "test": "saved"
+}

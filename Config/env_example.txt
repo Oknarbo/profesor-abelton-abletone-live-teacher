@@ -1,0 +1,73 @@
+# AI Copilot Environment Variables
+# Copy this file to .env and fill in your API keys
+# Or set these as system environment variables
+
+# OpenAI GPT API Key
+# Get from: https://platform.openai.com/api-keys
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Anthropic Claude API Key
+# Get from: https://console.anthropic.com/
+CLAUDE_API_KEY=your_claude_api_key_here
+
+# xAI Grok API Key
+# Get from: https://console.x.ai/
+GROK_API_KEY=your_grok_api_key_here
+
+# Groq API Key (FREE - Fast LLM inference)
+# Get from: https://console.groq.com/
+GROQ_API_KEY=your_groq_api_key_here
+
+# Claude MCP (Model Context Protocol) - Enable for tool calling
+# Set to 'true' to enable MCP tools for Claude
+CLAUDE_MCP_ENABLED=false
+
+# Server Configuration
+SERVER_HOST=localhost
+SERVER_PORT=8766
+
+# Voice Configuration
+VOICE_ENABLED=true
+VOICE_LANGUAGE=en
+
+# Logging
+LOG_LEVEL=INFO
+LOG_FILE=copilot.log
+
+# Features
+AUTO_ANALYZE=true
+AUTO_SUGGESTIONS=true
+LEARNING_MODE=true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

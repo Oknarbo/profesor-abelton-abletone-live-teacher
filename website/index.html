@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profesor Abelton — Landing</title>
+    <meta name="description" content="Profesor Abelton — AI asistent za Ableton Live. Landing page (placeholder sadržaj)." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="noise"></div>
+      <div class="glow"></div>
+    </div>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">PA</div>
+          <div class="brand__text">
+            <div class="brand__title">Profesor Abelton</div>
+            <div class="brand__sub">Your Abelton teacher</div>
+          </div>
+        </div>
+
+        <nav class="nav__links">
+          <a href="#features">Features</a>
+          <a href="#video">Setup video</a>
+          <a href="#pricing">Get it</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="#pricing">Gumroad</a>
+          <a class="btn btn--primary" href="#pricing">Buy on Gumroad</a>
+        </div>
+
+        <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="container nav__mobile" id="mobileNav" hidden>
+        <a href="#features">Features</a>
+        <a href="#video">Setup video</a>
+        <a href="#pricing">Get it</a>
+        <a href="#contact">Contact</a>
+        <div class="nav__mobileCtas">
+          <a class="btn btn--ghost" href="#pricing">Gumroad</a>
+          <a class="btn btn--primary" href="#pricing">Buy on Gumroad</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="pill">
+              <span class="pill__dot" aria-hidden="true"></span>
+              <span>Groq + Claude (MCP) • Windows first • Ableton Live</span>
+            </div>
+            <h1>
+              Profesor Abelton, your friend for
+              <span class="grad">Ableton</span>.
+            </h1>
+            <p class="lead">
+              I quit Ableton more times than I can count, everything felt complicated and answers were hard to find.
+              Profesor Abelton is an AI tutor + copilot that explains things like a friend would—and can translate your intent into Ableton actions.
+              Get an in depth analysis of your project.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#pricing">Get instant access</a>
+              <a class="btn btn--ghost" href="#video">Watch setup</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="meta">
+                <div class="meta__k">Works with</div>
+                <div class="meta__v">Ableton Live 10/11/12</div>
+              </div>
+              <div class="meta">
+                <div class="meta__k">Mode</div>
+                <div class="meta__v">Tool-based (MCP) + fallback</div>
+              </div>
+              <div class="meta">
+                <div class="meta__k">Setup</div>
+                <div class="meta__v">Wizard + Remote Script</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__card">
+            <div class="card">
+              <div class="card__top">
+                <div class="card__badge">Live Demo</div>
+                <div class="card__hint">UI mock</div>
+              </div>
+              <div class="terminal">
+                <div class="terminal__bar">
+                  <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+                  <span class="terminal__title">Profesor Abelton</span>
+                </div>
+                <div class="terminal__body">
+                  <div class="line"><span class="user">you</span> create a new midi track</div>
+                  <div class="line"><span class="ai">profesor</span> ✅ created MIDI track #5</div>
+                  <div class="line"><span class="user">you</span> set tempo to 128</div>
+                  <div class="line"><span class="ai">profesor</span> ✅ tempo set to 128 BPM</div>
+                  <div class="line"><span class="user">you</span> add reverb to track 1</div>
+                  <div class="line"><span class="ai">profesor</span> ✅ added Reverb (Dry/Wet 25%)</div>
+                  <div class="line muted">Try: “Explain compression like I’m new”, "Analyze my project and find flaws", "I'm new in Ableton, where to start?"</div>
+                </div>
+              </div>
+              <div class="card__bottom">
+                <div class="mini">
+                  <div class="mini__k">Latency</div>
+                  <div class="mini__v">[[PLACEHOLDER]]</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Providers</div>
+                  <div class="mini__v">Groq / Claude</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Language</div>
+                  <div class="mini__v">HR / EN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section__head">
+            <h2>Features</h2>
+            <p>Learn Ableton faster, get unstuck instantly, and stop relying on friends for every little question.</p>
+          </div>
+
+          <div class="grid3">
+            <div class="feature">
+              <div class="feature__icon">⚡</div>
+              <h3>Fast actions</h3>
+              <p>Ask in plain language—get clear steps (and actions when possible) so you can stay in flow.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🧰</div>
+              <h3>MCP tools</h3>
+              <p>Structured tools make actions more predictable than free‑form text parsing.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🎛️</div>
+              <h3>Ableton-native feel</h3>
+              <p>Focused on what beginners need: tracks, clips, devices, tempo, transport, and basic mixing.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🧙</div>
+              <h3>First launch wizard</h3>
+              <p>Guides setup and installs the Remote Script so Ableton can talk to Profesor Abelton.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🔐</div>
+              <h3>Secure keys</h3>
+              <p>Your API keys are stored encrypted on your machine (not in plain text config).</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🧠</div>
+              <h3>Learn as you go</h3>
+              <p>Ask “why” anytime—get beginner-friendly explanations and workflows as you build.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="video">
+        <div class="container">
+          <div class="section__head">
+            <h2>Setup video</h2>
+            <p>A few minutes to see the setup and the first commands end‑to‑end.</p>
+          </div>
+
+          <div class="video">
+            <div class="video__placeholder">
+              <div class="video__badge">Video placeholder</div>
+              <div class="video__text">[[PLACEHOLDER: embed YouTube/Vimeo link ovdje]]</div>
+              <button class="btn btn--primary btn--sm" type="button" disabled>Play</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section__head">
+            <h2>Get Profesor Abelton</h2>
+            <p>Instant delivery via Gumroad. Unzip, run, and follow the wizard.</p>
+          </div>
+
+          <div class="pricing">
+            <div class="priceCard">
+              <div class="priceCard__top">
+                <h3>Profesor Abelton</h3>
+                <div class="price">$29.99</div>
+                <div class="sub">Windows now • macOS coming</div>
+              </div>
+              <ul class="list">
+                <li>One-click run</li>
+                <li>First launch wizard</li>
+                <li>Remote Script included</li>
+                <li>Docs included</li>
+              </ul>
+              <a class="btn btn--primary" href="[[PLACEHOLDER_GUMROAD_LINK]]">Buy on Gumroad</a>
+              <div class="note">Free updates when available. You’ll be notified.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__head">
+            <h2>Contact & community</h2>
+            <p>Support and updates </p>
+          </div>
+
+          <div class="contact">
+            <div class="contact__card">
+              <div class="contact__k">Email</div>
+              <div class="contact__v">support@profesorabelton.com</div>
+              <div class="contact__hint">Profesor will respond to your email within 24 hours.</div>
+            </div>
+            <div class="contact__card">
+              <div class="contact__k">Gumroad</div>
+              <div class="contact__v">[[PLACEHOLDER_GUMROAD_LINK]]</div>
+              <div class="contact__hint">[[PLACEHOLDER: instant delivery]]</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footLeft">
+          <div class="brand brand--small">
+            <div class="brand__mark" aria-hidden="true">PA</div>
+            <div class="brand__text">
+              <div class="brand__title">Profesor Abelton</div>
+              <div class="brand__sub">Not affiliated with Ableton</div>
+            </div>
+          </div>
+          <div class="copyright">© 2026 Profesor Abelton. All rights reserved.</div>
+        </div>
+        <div class="footRight">
+          <a href="#features">Features</a>
+          <a href="#video">Video</a>
+          <a href="#pricing">Gumroad</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
