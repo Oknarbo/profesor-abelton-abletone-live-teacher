@@ -64,8 +64,6 @@ PY
 rm -f "$TMP_REQ"
 
 echo "[i] Building .app (PyInstaller, windowed)..."
-echo "[DEBUG] Trenutni direktorij: $(pwd)"
-echo "[DEBUG] Python executable: $PY"
 rm -rf build dist
 
 "$PY" -m PyInstaller \
@@ -113,17 +111,4 @@ echo ""
 echo "[i] Napomena:"
 echo " - Ako macOS blokira app (Gatekeeper): desni klik → Open → Open."
 echo " - Za 'bez upozorenja' treba code signing + notarization (kasnije)."
-echo ""
-echo "[DEBUG] Provjera app strukture:"
-ls -la "$APP_PATH"
-echo ""
-echo "[DEBUG] Provjera Contents/MacOS:"
-ls -la "$APP_PATH/Contents/MacOS/" 2>/dev/null || echo "Contents/MacOS ne postoji"
-echo ""
-echo "[TEST] Testiranje pokretanja aplikacije:"
-echo "Za testiranje grešaka pokrenite:"
-echo "open \"$APP_PATH\"  # ili dvoklik na .app fajl"
-echo ""
-echo "Ili za detaljne greške u terminalu:"
-echo "\"$APP_PATH/Contents/MacOS/ProfesorAbelton\""
 
