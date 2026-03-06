@@ -33,24 +33,25 @@ jobs:
       run: |
         mkdir -p build dist release
 
+    - name: Verify project structure
+      run: |
+        echo "=== Project structure ==="
+        ls -la
+        echo "=== Checking required directories ==="
+        ls -la Config/ || echo "Config directory missing"
+        ls -la RemoteScript/ || echo "RemoteScript directory missing"
+        ls -la Docs/ || echo "Docs directory missing"
+        echo "=== Checking required files ==="
+        ls -la launch_profesor_ableton.py || echo "Main script missing"
+        ls -la requirements.txt || echo "Requirements file missing"
+        ls -la *.md || echo "Documentation files"
+        echo "=== Checking Python version ==="
+        python --version
+        pip --version
+
     - name: Run PyInstaller
       run: |
-        pyinstaller --noconfirm --clean --windowed \
-          --name "ProfesorAbelton" \
-          --add-data "Config:Config" \
-          --add-data "RemoteScript:RemoteScript" \
-          --add-data "Docs:Docs" \
-          --add-data "FAQ.md:." \
-          --add-data "USER_MANUAL.md:." \
-          --add-data "README.md:." \
-          --add-data "LICENSE.txt:." \
-          --add-data "GUMROAD_README.txt:." \
-          --hidden-import "GUI.profesor_ableton_gui" \
-          --hidden-import "GUI.first_launch_wizard" \
-          --hidden-import "Server.ai_copilot_server" \
-          --hidden-import "Utils.api_key_manager" \
-          --hidden-import "Utils.ableton_detector" \
-          launch_profesor_ableton.py
+        pyinstaller --noconfirm --clean ProfesorAbelton.spec
 
     - name: Create macOS app bundle
       run: |
